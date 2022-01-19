@@ -64,7 +64,7 @@ const Content = () => {
           <br />
           <br />
           <div>
-            <a href="" id="goId">
+            <a href="/" id="goId">
               <u>Go</u>
               {" >"}
             </a>
@@ -73,7 +73,9 @@ const Content = () => {
       </div>
 
       <div className="keyMatrics">
-        <div className="keyMatricsContainer"></div>
+        <div className="keyMatricsContainer">
+          <p></p>
+        </div>
         <div className="keyMatricsContainer"></div>
       </div>
     </div>
