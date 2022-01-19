@@ -1,5 +1,6 @@
 import filter from "./assets/filter.png";
 import React from "react";
+import calendar from "./assets/calendar.png";
 
 const Content = () => {
   return (
@@ -8,14 +9,72 @@ const Content = () => {
         <img src={filter} alt="" id="icon-id" />
         <p>FILTERS</p>
       </div>
-      <div className="container1"></div>
       <div className="filters-container">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          laborum a atque voluptas optio, doloremque voluptatibus quibusdam
-          dignissimos possimus eos, reprehenderit architecto! Veritatis autem
-          libero laudantium iste voluptate numquam molestiae?
-        </p>
+        <div className="col">
+          Geographic Location
+          <div className="innerCol">
+            Location 1
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+          <div className="innerCol">
+            Location 2
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div className="col">
+          Powertrain Type
+          <div className="innerCol">
+            Vocation 1
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+          <div className="innerCol">
+            Vocation 2
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div className="col">
+          Fleet Size
+          <div className="innerCol">
+            Category 1
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+          <div className="innerCol">
+            Category 2
+            <select>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div className="DateCol">
+          Date
+          <br />
+          <div>
+            <img className="calendarImg" src={calendar} alt="" id="icon-id-2" />
+          </div>
+          <br />
+          <br />
+          <div>
+            <a href="" id="goId">
+              <u>Go</u>
+              {" >"}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="keyMatrics">
+        <div className="keyMatricsContainer"></div>
+        <div className="keyMatricsContainer"></div>
       </div>
     </div>
   );
