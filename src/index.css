@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@400;700&family=Satisfy&family=Source+Sans+Pro:wght@300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&family=M+PLUS+1+Code:wght@300&family=Montserrat:wght@200&family=Noto+Sans&family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&family=M+PLUS+1+Code:wght@300&family=Montserrat:wght@200&family=Noto+Sans&family=Nunito:wght@200&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:wght@200&display=swap');
 * {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
@@ -12,6 +12,8 @@ body {
 .navbar {
   background-color: #5884a4;
   height: 50px;
+  top: 0;
+  position: sticky;
 }
 
 .sidebar {
@@ -158,7 +160,7 @@ hr {
 .filters-container {
   width: 90%;
   height: 20%;
-  background-color: white;
+  background-color: #fbf8f8;
   margin-top: 5%;
   margin-right: 2%;
   padding: 2%;
@@ -212,10 +214,87 @@ select {
   margin-left: 60%;
   text-decoration: none;
   color: black;
+} 
+
+.wrap {
+  display: flex;
+  margin-top: 2%;
+  margin-left: 1%;
+  width: 100%;
+  height: 100%; /* need to set height for this to work in Chrome */
 }
 
-.keyMatricsContainer {
+.cell-wrap {
+  vertical-align: top;
+  height: 100%;
+  padding-top: 10%;
+}
+
+.leftKeyMetrics,.rightKeyMetrics {
+  padding-left: 10px;
+  background-color: #fbf8f8;
+  border-radius: 15px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  height: 100%;
   width: 90%;
-  height: 30%;
 }
 
+.leftKeyMetrics th,.rightKeyMetrics th {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  color: #0077b6;
+}
+
+.leftKeyMetrics th:nth-of-type(2n-1),.rightKeyMetrics th:nth-of-type(2n-1) {
+  color: #f72585;
+}
+
+.leftKeyMetrics td:nth-of-type(2n-1),.rightKeyMetrics td:nth-of-type(2n-1) {
+  color: #f72585;
+}
+
+.leftKeyMetrics td,.rightKeyMetrics td {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+table td, table th {
+  text-align: left;
+  padding: 0.4em;
+}
+
+.keyMetricsHeading {
+  margin-top: 2%;
+}
+
+.keyMetricsInnerData {
+  font-size: 0.8rem;
+}
+
+.performance {
+  display: flex;
+  width: 90%;
+  border-radius: 15px;
+  background-color: #fbf8f8;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.performanceHeading {
+  margin-top: 3%;
+}
+
+.performanceChart {
+  display: flex;
+  border-radius: 5%;
+  height: 30%;
+  width: 30%;
+  padding: 2% 2%;
+  margin-bottom: 10px;
+  margin-right: 5%;
+  margin-left: 3%;
+  font-family: "Roboto Mono", monospace;
+}
