@@ -141,7 +141,7 @@ const Content = () => {
                 title: {
                   display: true,
                   text: "Active vs Inactive Vehicles",
-                  position: 'bottom',
+                  position: "bottom",
                   fontColor: "#0077b6",
                   fontSize: 10,
                 },
@@ -199,7 +199,7 @@ const Content = () => {
                 title: {
                   display: true,
                   text: "Cost per km vs Total Cost",
-                  position: 'bottom',
+                  position: "bottom",
                   fontColor: "#f72585",
                   fontSize: 10,
                 },
@@ -256,8 +256,8 @@ const Content = () => {
               options={{
                 title: {
                   display: true,
-                  text: "Active vs Inactive Vehicles",
-                  position: 'bottom',
+                  text: "Inspection Item Failure Rate",
+                  position: "bottom",
                   fontColor: "#0077b6",
                   fontSize: 10,
                 },
