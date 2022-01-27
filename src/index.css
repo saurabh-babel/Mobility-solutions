@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@400;700&family=Satisfy&family=Source+Sans+Pro:wght@300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&family=M+PLUS+1+Code:wght@300&family=Montserrat:wght@200&family=Noto+Sans&family=Nunito:wght@200&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&family=M+PLUS+1+Code:wght@300&family=Montserrat:wght@200&family=Noto+Sans&family=Nunito:wght@200&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:wght@200&display=swap");
 * {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
@@ -175,7 +175,7 @@ hr {
   padding-bottom: 5%;
   margin-right: 3%;
   align-content: flex-start;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: smaller;
 }
 
@@ -186,18 +186,18 @@ select {
 }
 
 .innerCol {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
   padding-top: 7%;
 }
 
 .DateCol {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 5%;
   margin-right: 3%;
   align-content: flex-start;
-  width:12%;
+  width: 12%;
   font-size: smaller;
   /* padding-top: 10%; */
 }
@@ -214,7 +214,7 @@ select {
   margin-left: 60%;
   text-decoration: none;
   color: black;
-} 
+}
 
 .wrap {
   display: flex;
@@ -230,7 +230,8 @@ select {
   padding-top: 10%;
 }
 
-.leftKeyMetrics,.rightKeyMetrics {
+.leftKeyMetrics,
+.rightKeyMetrics {
   padding-left: 10px;
   background-color: #fbf8f8;
   border-radius: 15px;
@@ -240,28 +241,33 @@ select {
   width: 90%;
 }
 
-.leftKeyMetrics th,.rightKeyMetrics th {
-  font-family: 'Nunito', sans-serif;
+.leftKeyMetrics th,
+.rightKeyMetrics th {
+  font-family: "Nunito", sans-serif;
   font-size: 0.7rem;
   color: #0077b6;
 }
 
-.leftKeyMetrics th:nth-of-type(2n-1),.rightKeyMetrics th:nth-of-type(2n-1) {
+.leftKeyMetrics th:nth-of-type(2n-1),
+.rightKeyMetrics th:nth-of-type(2n-1) {
   color: #f72585;
 }
 
-.leftKeyMetrics td:nth-of-type(2n-1),.rightKeyMetrics td:nth-of-type(2n-1) {
+.leftKeyMetrics td:nth-of-type(2n-1),
+.rightKeyMetrics td:nth-of-type(2n-1) {
   color: #f72585;
 }
 
-.leftKeyMetrics td,.rightKeyMetrics td {
-  font-family: 'Nunito', sans-serif;
+.leftKeyMetrics td,
+.rightKeyMetrics td {
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   color: #0077b6;
   font-weight: bold;
 }
 
-table td, table th {
+table td,
+table th {
   text-align: left;
   padding: 0.4em;
 }
@@ -284,7 +290,7 @@ table td, table th {
 }
 
 .performanceHeading {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .performanceChart {
@@ -297,4 +303,79 @@ table td, table th {
   margin-right: 5%;
   margin-left: 3%;
   font-family: "Roboto Mono", monospace;
+}
+
+.totalCostHeading {
+  margin-top: 2%;
+}
+
+.totalCostLeft {
+  width: 33%;
+  font-size: smaller;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.totalCostContainer {
+  margin-left: 2%;
+  margin-top: 2%;
+  display: flex;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.totalCostRightCell {
+  width: 35%;
+  font-size: 0.6rem;
+  color: #0077b6;
+}
+
+.totalCostRightCell2 {
+  font-size: 0.6rem;
+  color: #0077b6;
+  padding-left: 40px;
+  display: inline;
+}
+
+.totalCostSelectedCell {
+  font-size: 0.6rem;
+  color: #0077b6;
+  text-decoration: underline 2.5px solid #f72585;
+  text-underline-offset: 5px;
+  /* border-bottom: 2.5px solid #f72585; */
+}
+
+.totalCostLeftCell {
+  width: 30%;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #f72585;
+}
+
+.vLine {
+  display: inline;
+  border-left: 1px solid rgb(186, 184, 184);
+  height: 290px;
+  margin-left: 8%;
+  margin-top: 3%;
+}
+
+#totalCostGif {
+  width: 100%;
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+.totalCostRightTable{
+  padding: 10px;
+  border-spacing: 15px;
+}
+
+#totalCostRightHorizontalRule hr{
+  border: 0.1px solid rgb(186, 184, 184);
+  width: 90%;
+  height: 0px;
+  margin-left: 10%;
 }

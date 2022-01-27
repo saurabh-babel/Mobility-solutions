@@ -1,6 +1,7 @@
 import React from "react";
 import filter from "./assets/filter.png";
 import calendar from "./assets/calendar.png";
+import truck from "./assets/truck.gif";
 import { Line } from "react-chartjs-2";
 
 const Content = () => {
@@ -292,6 +293,61 @@ const Content = () => {
                 },
               }}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="totalCost">
+        <div className="totalCostHeading">TOTAL COST OF OWNERSHIP ANALYSIS</div>
+        <div className="totalCostContainer">
+          <div className="totalCostLeft">
+            <table>
+              <tr>
+                <td rowSpan={3} className="totalCostLeftCell">
+                  INDIRECT COSTS
+                </td>
+                <td className="totalCostSelectedCell">Tyre Performance</td>
+              </tr>
+              <tr>
+                <td className="totalCostRightCell">Uptime</td>
+              </tr>
+              <tr>
+                <td className="totalCostRightCell">Maintenance</td>
+              </tr>
+            </table>
+            <img src={truck} alt="" id="totalCostGif" />
+            <table>
+              <tr>
+                <td rowSpan={3} className="totalCostLeftCell">
+                  DIRECT COSTS
+                </td>
+                <td className="totalCostRightCell">Fuel Costs</td>
+              </tr>
+              <tr>
+                <td className="totalCostRightCell">Insurance Costs</td>
+              </tr>
+              <tr>
+                <td className="totalCostRightCell">Fleet Drivers</td>
+              </tr>
+            </table>
+          </div>
+          <div className="vLine"></div>
+          <div className="totalCostRight">
+            <table className="totalCostRightTable">
+              <tr>
+                <td
+                  className="totalCostRightCell2"
+                  style={{ "text-decoration": "underline 2.5px solid #f72585",
+                  "text-underline-offset" : "5px",
+                  "color": "#f72585"}}
+                >
+                  By OEM
+                </td>
+                <td className="totalCostRightCell2">By Vehicle Model</td>
+                <td className="totalCostRightCell2">By Fleet Industry</td>
+              </tr>
+            </table>
+            <div id="totalCostRightHorizontalRule"><hr /></div>
           </div>
         </div>
       </div>
