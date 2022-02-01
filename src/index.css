@@ -72,7 +72,7 @@ body {
 
 .sidebar #logo-id {
   height: 50px;
-  width: 110px;
+  width: 105px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -102,7 +102,7 @@ body {
 }
 
 hr {
-  border: 2.5px solid #8fb0c7;
+  border: 1.5px solid #8fb0c7;
   border-radius: 5px;
   width: 70%;
   margin: auto;
@@ -368,14 +368,138 @@ table th {
   margin-bottom: 7%;
 }
 
-.totalCostRightTable{
+.totalCostRightTable {
   padding: 10px;
   border-spacing: 15px;
 }
 
-#totalCostRightHorizontalRule hr{
+#totalCostRightHorizontalRule hr {
   border: 0.1px solid rgb(186, 184, 184);
   width: 90%;
   height: 0px;
   margin-left: 10%;
+}
+
+#audienceInsightsHeading {
+  margin: 2% 0% 2% 0%;
+}
+
+.audienceInsightsContainer {
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+  padding-bottom: 3%;
+}
+
+.audienceInsightsContainerTop {
+  display: flex;
+}
+
+.audienceInsightsContainerBottom {
+  display: flex;
+  width: 100%;
+  margin-right: 100%;
+}
+
+.audience1 {
+  height: 50px;
+}
+
+.performanceChart {
+  margin: 2%;
+}
+
+.indian-map img {
+  width: 80%;
+  margin-left: 2%;
+}
+
+.audienceFleets {
+  margin: 5% 4% 2% 0%;
+}
+
+#audienceInsightsTable {
+  width: 30%;
+  margin: 3%;
+  height: 30%;
+}
+
+#audienceInsightsTable td {
+  border: 1px solid white;
+  width: 40px;
+  font-size: 0.37rem;
+}
+
+#audienceInsightsTable thead td {
+  font-size: 0.42rem;
+  font-weight: bold;
+  background-color: #e9ecef;
+  border-bottom: 3px solid white;
+}
+
+#cohortAnalysis {
+  margin-left: 10%;
+  font-size: 0.7rem;
+  color: #219ebc;
+}
+
+.fleetChurnJourney img {
+  width: 380px;
+  height: 234px;
+  margin-left: 10%;
+}
+
+.topPerformingFleetsHeading {
+  margin: 2% 0% 2% 0%;
+}
+
+.topPerformingFleetsContainer {
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+  padding-bottom: 3%;
+}
+
+.indiaImg {
+  width: 75%;
+  border-radius: 20px;
+  margin: 15% 0 0 15%;
+}
+
+.routesImg {
+  width: 80%;
+  height: 75%;
+  border-radius: 20px;
+  margin: 15% 0 0 20%;
+}
+
+.tpfTop {
+  display: flex;
+}
+
+.tpfBottom {
+  display: flex;
+}
+
+.tpfTopTable {
+  border-collapse: separate;
+  border-spacing: 50px 0;
+  margin-right: 4%;
+  margin-top: 5%;
+}
+
+.tpfTopTable td {
+  font-size: 0.9rem;
+  color: #6c757d;
+  border-bottom: 1px solid #dcddde;
+  padding: 5px 20px;
+}
+
+.tpfTopTable thead td {
+  font-size: 0.8rem;
+  border-bottom: 2px solid #dcddde;
 }

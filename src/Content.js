@@ -2,7 +2,8 @@ import React from "react";
 import filter from "./assets/filter.png";
 import calendar from "./assets/calendar.png";
 import truck from "./assets/truck.gif";
-import { Line } from "react-chartjs-2";
+import india from "./assets/india.png";
+import { Line, Bar } from "react-chartjs-2";
 
 const Content = () => {
   return (
@@ -337,9 +338,11 @@ const Content = () => {
               <tr>
                 <td
                   className="totalCostRightCell2"
-                  style={{ "text-decoration": "underline 2.5px solid #f72585",
-                  "text-underline-offset" : "5px",
-                  "color": "#f72585"}}
+                  style={{
+                    "text-decoration": "underline 2.5px solid #f72585",
+                    "text-underline-offset": "5px",
+                    color: "#f72585",
+                  }}
                 >
                   By OEM
                 </td>
@@ -347,7 +350,348 @@ const Content = () => {
                 <td className="totalCostRightCell2">By Fleet Industry</td>
               </tr>
             </table>
-            <div id="totalCostRightHorizontalRule"><hr /></div>
+            <div id="totalCostRightHorizontalRule">
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="audienceInsights">
+        <div id="audienceInsightsHeading">AUDIENCE INSIGHTS</div>
+        <div className="audienceInsightsContainer">
+          <div className="audienceInsightsContainerTop">
+            <div className="performanceChart">
+              <div>
+                <Bar
+                  data={{
+                    labels: [
+                      "IDEAL DRIVERS",
+                      "NEW DRIVERS",
+                      "RASH DRIVERS",
+                      "SAFE DRIVERS",
+                      "SUSPICIOUS",
+                    ],
+                    datasets: [
+                      {
+                        data: [80, 95, 90, 90, 93],
+                        fill: true,
+                        pointRadius: 1,
+                        backgroundColor: [
+                          "#ffafcc",
+                          "#ffafcc",
+                          "#ffafcc",
+                          "#8ecae6",
+                          "#219ebc",
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 20,
+                      },
+                    ],
+                  }}
+                  height={200}
+                  width={200}
+                  options={{
+                    maintainAspectRatio: true,
+                    scales: {
+                      yAxes: [
+                        {
+                          gridLines: {
+                            display: true,
+                          },
+                          ticks: {
+                            display: false,
+                            suggestedMin: 0,
+                          },
+                        },
+                      ],
+                      xAxes: [
+                        {
+                          gridLines: {
+                            display: false,
+                          },
+                          ticks: {
+                            labelOffset: 3,
+                            fontSize: 20,
+                            suggestedMin: 0,
+                            stepSize: 30,
+                            display: true,
+                            fontSize: 8,
+                            fontColor: "black",
+                            fontFamily: "Source Sans Pro",
+                          },
+                        },
+                      ],
+                    },
+                    legend: {
+                      display: false,
+                    },
+                    title: {
+                      display: true,
+                      text: "Driver Segments Engaged",
+                      position: "bottom",
+                      fontColor: "#219ebc",
+                      fontSize: 10,
+                      fontStyle: "normal",
+                    },
+                  }}
+                />
+              </div>
+            </div>
+            <div className="indian-map">
+              <img src={india} alt="" style={{ "margin-top": "8%" }} />
+            </div>
+            <div className="audienceFleets">
+              <div>
+                <Bar
+                  data={{
+                    labels: ["XXX", "ABC", "PQR", "LMN", "XYZ"],
+                    datasets: [
+                      {
+                        data: [93, 93, 80, 80, 85],
+                        fill: true,
+                        pointRadius: 1,
+                        backgroundColor: [
+                          "#ffafcc",
+                          "#ffafcc",
+                          "#ffafcc",
+                          "#8ecae6",
+                          "#219ebc",
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 20,
+                      },
+                    ],
+                  }}
+                  height={200}
+                  width={200}
+                  options={{
+                    maintainAspectRatio: true,
+                    scales: {
+                      yAxes: [
+                        {
+                          gridLines: {
+                            display: true,
+                          },
+                          ticks: {
+                            display: false,
+                            suggestedMin: 0,
+                          },
+                        },
+                      ],
+                      xAxes: [
+                        {
+                          gridLines: {
+                            display: false,
+                          },
+                          ticks: {
+                            labelOffset: 3,
+                            fontSize: 20,
+                            suggestedMin: 0,
+                            stepSize: 30,
+                            display: true,
+                            fontSize: 8,
+                            fontColor: "black",
+                            fontFamily: "Source Sans Pro",
+                          },
+                        },
+                      ],
+                    },
+                    legend: {
+                      display: false,
+                    },
+                    title: {
+                      display: true,
+                      text: ["Fleets with", "highest usage"],
+                      position: "bottom",
+                      fontColor: "#219ebc",
+                      fontSize: 10,
+                      fontStyle: "normal",
+                    },
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="audienceInsightsContainerBottom">
+            <table id="audienceInsightsTable">
+              <thead>
+                <td></td>
+                <td>Week 1</td>
+                <td>Week 2</td>
+                <td>Week 3</td>
+                <td>Week 4</td>
+                <td>Week 5</td>
+                <td>Week 6</td>
+              </thead>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 1</td>
+                <td style={{ backgroundColor: "#ffafcc" }}></td>
+                <td style={{ backgroundColor: "#ffafcc" }}></td>
+                <td style={{ backgroundColor: "#ffafcc" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#ffafcc" }}></td>
+              </tr>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 2</td>
+                <td style={{ backgroundColor: "#ffc4d6" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#ffafcc" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+              </tr>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 3</td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#ffc4d6" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+              </tr>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 4</td>
+                <td style={{ backgroundColor: "#ffc4d6" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#ffc4d6" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+              </tr>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 5</td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+                <td style={{ backgroundColor: "#dee2e6" }}></td>
+              </tr>
+              <tr>
+                <td style={{ backgroundColor: "#dee2e6" }}>Cohort 6</td>
+                <td style={{ backgroundColor: "#ffc4d6" }}></td>
+                <td style={{ backgroundColor: "#f72585" }}></td>
+              </tr>
+            </table>
+            <div className="fleetChurnJourney">
+              <img src="https://i.ibb.co/hc4fxPS/image.png" alt="" />
+            </div>
+          </div>
+          <div id="cohortAnalysis">Cohort Analysis</div>
+        </div>
+      </div>
+
+      <div className="topPerformingFleets">
+        <div className="topPerformingFleetsHeading">
+          TOP PERFORMING FLEETS, VEHICLE MODELS & ROUTES
+        </div>
+        <div className="topPerformingFleetsContainer">
+          <div className="tpfTop">
+            <div>
+              <img
+                src="https://i.ibb.co/7XKNyk6/image.png"
+                alt=""
+                className="indiaImg"
+              />
+            </div>
+            <div className="tpfTopTable">
+              <table>
+                <thead>
+                  <td>Fleet</td>
+                  <td>OD Pair</td>
+                  <td>Uptime %</td>
+                  <td>Total Vehicles</td>
+                  <td>Total Revenue</td>
+                </thead>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"1 000"}</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"10 000"}</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"10 000"}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div className="tpfBottom">
+            <div>
+              <img
+                src="https://i.ibb.co/p2vqhQG/image.png"
+                alt=""
+                className="routesImg"
+              />
+            </div>
+            <div className="tpfTopTable">
+              <table style={{"marginLeft":25}}>
+                <thead>
+                  <td>OEM/{"\n"}Model</td>
+                  <td>Tonnage Capacity</td>
+                  <td>Avg. Usage Time</td>
+                  <td>Total Vehicles</td>
+                  <td>Total Revenue</td>
+                </thead>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"1 000"}</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>10</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"10 000"}</td>
+                </tr>
+                <tr>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>ABC</td>
+                  <td>{"1 000"}</td>
+                  <td>{"10 000"}</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
