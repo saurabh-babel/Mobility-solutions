@@ -12,7 +12,7 @@ const Insights = () => {
             <h3>₹100k</h3>
             <h6>Assisted Revenue</h6>
           </p>
-          <p style={{color:"#f72585"}}>
+          <p style={{ color: "#f72585" }}>
             <h3>₹70k</h3>
             <h6>Direct Revenue</h6>
           </p>
@@ -98,6 +98,7 @@ const Insights = () => {
             height={80}
             width={130}
             options={{
+              responsive: false,
               maintainAspectRatio: true,
               scales: {
                 yAxes: [

@@ -4,6 +4,8 @@ import calendar from "./assets/calendar.png";
 import truck from "./assets/truck.gif";
 import india from "./assets/india.png";
 import { Line, Bar } from "react-chartjs-2";
+// import ChartDataLabels from "chartjs-plugin-datalabels";
+// Bar.register(ChartDataLabels);
 
 const Content = () => {
   return (
@@ -93,7 +95,7 @@ const Content = () => {
               </td>
               <td>
                 {" "}
-                <span className="keyMetricsInnerData">₹</span> 2.1
+                <span className="keyMetricsInnerData">₹</span>2.1
               </td>
             </tr>
           </table>
@@ -389,6 +391,7 @@ const Content = () => {
                       },
                     ],
                   }}
+                  // plugins = {[ChartDataLabels]}
                   height={200}
                   width={200}
                   options={{
@@ -400,7 +403,9 @@ const Content = () => {
                             display: true,
                           },
                           ticks: {
-                            display: false,
+                            // display: false,
+                            stepSize: 20,
+                            fontSize: 8,
                             suggestedMin: 0,
                           },
                         },
@@ -412,12 +417,11 @@ const Content = () => {
                           },
                           ticks: {
                             labelOffset: 3,
-                            fontSize: 20,
                             suggestedMin: 0,
                             stepSize: 30,
                             display: true,
                             fontSize: 8,
-                            fontColor: "black",
+                            fontColor: "#14213d",
                             fontFamily: "Source Sans Pro",
                           },
                         },
@@ -474,7 +478,8 @@ const Content = () => {
                             display: true,
                           },
                           ticks: {
-                            display: false,
+                            stepSize: 20,
+                            fontSize: 8,
                             suggestedMin: 0,
                           },
                         },
@@ -486,12 +491,11 @@ const Content = () => {
                           },
                           ticks: {
                             labelOffset: 3,
-                            fontSize: 20,
                             suggestedMin: 0,
                             stepSize: 30,
                             display: true,
                             fontSize: 8,
-                            fontColor: "black",
+                            fontColor: "#14213d",
                             fontFamily: "Source Sans Pro",
                           },
                         },
@@ -647,7 +651,7 @@ const Content = () => {
               />
             </div>
             <div className="tpfTopTable">
-              <table style={{"marginLeft":25}}>
+              <table style={{ marginLeft: 25 }}>
                 <thead>
                   <td>OEM/{"\n"}Model</td>
                   <td>Tonnage Capacity</td>
