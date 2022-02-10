@@ -1,14 +1,21 @@
+/* This css file contains the styles for all the components */
+
+/* Import Different fonts from Google Fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:wght@400;700&family=Satisfy&family=Source+Sans+Pro:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Bebas+Neue&family=M+PLUS+1+Code:wght@300&family=Montserrat:wght@200&family=Noto+Sans&family=Nunito:wght@200&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:wght@200&display=swap");
+
+/* Complete page styling  */
 * {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
 }
 
+ /* Body Styling */
 body {
   background-color: #f5f5f5;
 }
 
+/* Navbar Styling */
 .navbar {
   background-color: #5884a4;
   height: 50px;
@@ -16,6 +23,7 @@ body {
   position: sticky;
 }
 
+/* Sidebar Styling */
 .sidebar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 130px; /* Set the width of the sidebar */
@@ -27,6 +35,7 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
+/* Insights Overview section styling */
 .insights {
   margin-top: 50px;
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -38,6 +47,8 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
   border-left: 3px solid white;
 }
+
+/* Styling the central section  */
 
 .content {
   margin-top: 25px;
@@ -58,17 +69,7 @@ body {
   font-weight: bold;
 }
 
-.insights img {
-  height: 600px;
-  padding-left: 45px;
-}
-
-#insight-heading {
-  display: block;
-  text-align: center;
-  padding-bottom: 7%;
-  padding-top: 10px;
-}
+/* Styling the sidebar  */
 
 .sidebar #logo-id {
   height: 50px;
@@ -132,6 +133,20 @@ hr {
   padding-bottom: 12px;
 }
 
+/* Styling the insights overview section  */
+
+.insights img {
+  height: 600px;
+  padding-left: 45px;
+}
+
+#insight-heading {
+  display: block;
+  text-align: center;
+  padding-bottom: 7%;
+  padding-top: 10px;
+}
+
 .chart1 {
   display: flex;
   margin-left: 15%;
@@ -156,6 +171,8 @@ hr {
   font-family: "Roboto Mono", monospace;
   font-size: larger;
 }
+
+/* Central section  */
 
 .filters-container {
   width: 90%;
@@ -381,6 +398,8 @@ table th {
   margin-left: 10%;
 }
 
+/* Audience Insights Styling */
+
 #audienceInsightsHeading {
   margin: 2% 0% 2% 0%;
 }
@@ -452,6 +471,8 @@ table th {
   margin-left: 10%;
 }
 
+/* Top Performing Fleets, Vehicle Models & Routes Styling */
+
 .topPerformingFleetsHeading {
   margin: 2% 0% 2% 0%;
 }
@@ -504,3 +525,5 @@ table th {
   font-size: 0.8rem;
   border-bottom: 2px solid #dcddde;
 }
+
+/* End of Index.css  */

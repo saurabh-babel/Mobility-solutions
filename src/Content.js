@@ -1,22 +1,42 @@
+// This file contains the code of the central section of the designed web page
+// Components included:
+// Filters
+// Key Metrics
+// Performance
+// Total Cost of ownership analysis
+// Audience Insights
+// TOP PERFORMING FLEETS, VEHICLE MODELS & ROUTES
+
+// Import Required assets and libraries
 import React from "react";
 import filter from "./assets/filter.png";
 import calendar from "./assets/calendar.png";
 import truck from "./assets/truck.gif";
 import india from "./assets/india.png";
 import { Line, Bar } from "react-chartjs-2";
+
+// Plugin for data label (to be used to disply labels on top of bar charts)
+// Available in v3 ChartJS
+
 // import ChartDataLabels from "chartjs-plugin-datalabels";
 // Bar.register(ChartDataLabels);
 
+// Stateless Functional Component - Content
+// To be rendered by App.js
 const Content = () => {
   return (
     <div className="content">
+      {/* Contains Filter Heading */}
       <div className="filters">
         <img src={filter} alt="" id="icon-id" />
         <p>FILTERS</p>
       </div>
+
+      {/* Contains Different Filter Categories */}
       <div className="filters-container">
         <div className="col">
           Geographic Location
+          {/* innerCol used to provide options to the user */}
           <div className="innerCol">
             Location 1
             <select>
@@ -60,6 +80,7 @@ const Content = () => {
             </select>
           </div>
         </div>
+        {/* Used to select the date field */}
         <div className="DateCol">
           Date
           <br />
@@ -69,6 +90,7 @@ const Content = () => {
           <br />
           <br />
           <div>
+            {/* Submit button to register the data */}
             <a href="/" id="goId">
               <u>Go</u>
               {" >"}
@@ -77,8 +99,13 @@ const Content = () => {
         </div>
       </div>
 
+      {/* Contains the heading Key Metrics */}
       <div className="keyMetricsHeading">KEY METRICS</div>
+
+      {/* Wrap contains both the containers - Left and Right */}
+      {/* The Data in both the containers is stored in the form of a table */}
       <div className="wrap">
+        {/* cell-wrap-left contains the left container */}
         <div className="cell-wrap-left">
           <table className="leftKeyMetrics">
             <tr>
@@ -100,6 +127,8 @@ const Content = () => {
             </tr>
           </table>
         </div>
+
+        {/* cell-wrap-right contains the right container */}
         <div className="cell-wrap-right">
           <table className="rightKeyMetrics">
             <tr>
@@ -122,25 +151,34 @@ const Content = () => {
         </div>
       </div>
 
+      {/* Performance Section Heading */}
+      {/* Contains three charts with similar styling but different attributes */}
       <div className="performanceHeading">PERFORMANCE</div>
       <div className="performance">
         <div className="performanceChart">
           <div>
+            {/* This Chart is a line chart for Active vs Inactive Vechicles */}
             <Line
               data={{
+                // Contains the labels to be displayed on the x-axis
                 labels: ["Jun", "Jul", "Aug"],
+
+                // Contains the dataset and the corresponding values to be displayed on the y-axis
                 datasets: [
                   {
                     data: [20, 60, 40],
                     fill: false,
                     borderColor: "#0077b6",
+                    // Adjusting the line pattern of the plot
                     borderWidth: 1,
                     pointRadius: 1,
                   },
                 ],
               }}
+              // Height and Width can be varied according to the page desing and styling
               height={150}
               width={150}
+              // Provides additonal options to style the line chart
               options={{
                 title: {
                   display: true,
@@ -150,6 +188,7 @@ const Content = () => {
                   fontSize: 10,
                 },
                 maintainAspectRatio: true,
+                // Helps to modify the styles of the axes of the plot
                 scales: {
                   yAxes: [
                     {
@@ -175,6 +214,7 @@ const Content = () => {
                     },
                   ],
                 },
+                // Legend helps when there are multiple graphs within the same plot
                 legend: {
                   display: false,
                 },
@@ -182,6 +222,8 @@ const Content = () => {
             />
           </div>
         </div>
+
+        {/* Chart 2 from the Performance Section */}
         <div className="performanceChart">
           <div>
             <Line
@@ -240,6 +282,8 @@ const Content = () => {
             />
           </div>
         </div>
+
+        {/* Chart 3 from the Performance Chart */}
         <div className="performanceChart">
           <div>
             <Line
@@ -300,12 +344,17 @@ const Content = () => {
         </div>
       </div>
 
+      {/* Total Cost of ownership analysis Section */}
       <div className="totalCost">
+        {/* Heading of the section  */}
         <div className="totalCostHeading">TOTAL COST OF OWNERSHIP ANALYSIS</div>
         <div className="totalCostContainer">
+          {/* This Container Contains to sections - Left and Right  */}
           <div className="totalCostLeft">
+            {/* Table to implement Indirect Costs section  */}
             <table>
               <tr>
+                {/* Rowspan helps in adjusting the heading for the given 3 rows */}
                 <td rowSpan={3} className="totalCostLeftCell">
                   INDIRECT COSTS
                 </td>
@@ -318,9 +367,14 @@ const Content = () => {
                 <td className="totalCostRightCell">Maintenance</td>
               </tr>
             </table>
+
+            {/* Gif to be displayed in the container obtained from assets (local) */}
             <img src={truck} alt="" id="totalCostGif" />
+
+            {/* Contains the section for the below container  */}
             <table>
               <tr>
+                {/* RowSpan of 3 helps in adjusting the heading with the content */}
                 <td rowSpan={3} className="totalCostLeftCell">
                   DIRECT COSTS
                 </td>
@@ -334,9 +388,14 @@ const Content = () => {
               </tr>
             </table>
           </div>
+
+          {/* vertical line to be displayed to distinguish the sections  */}
           <div className="vLine"></div>
+
+          {/* Right Container in the Total Cost of ownership analysis section  */}
           <div className="totalCostRight">
             <table className="totalCostRightTable">
+              {/* Contains table to display the 3 heading along with data when available */}
               <tr>
                 <td
                   className="totalCostRightCell2"
@@ -352,6 +411,8 @@ const Content = () => {
                 <td className="totalCostRightCell2">By Fleet Industry</td>
               </tr>
             </table>
+
+            {/* Horizontal Rule added using HR tag */}
             <div id="totalCostRightHorizontalRule">
               <hr />
             </div>
@@ -360,9 +421,12 @@ const Content = () => {
       </div>
 
       <div className="audienceInsights">
+        {/* Contains 3 divs in row1 & 2 divs in row 2 */}
         <div id="audienceInsightsHeading">AUDIENCE INSIGHTS</div>
         <div className="audienceInsightsContainer">
+          {/* 3 divs in top row */}
           <div className="audienceInsightsContainerTop">
+            {/* Div 1 from row 1 contains a bar chart of Driver Segments Engaged */}
             <div className="performanceChart">
               <div>
                 <Bar
@@ -391,7 +455,8 @@ const Content = () => {
                       },
                     ],
                   }}
-                  // plugins = {[ChartDataLabels]}
+                  // plugins = {[ChartDataLabels]} (Not supported by current ChartJS Version)
+                  // Define the dimensions of the chart
                   height={200}
                   width={200}
                   options={{
@@ -415,6 +480,7 @@ const Content = () => {
                           gridLines: {
                             display: false,
                           },
+                          // Modify the ticks and it's styling
                           ticks: {
                             labelOffset: 3,
                             suggestedMin: 0,
@@ -430,6 +496,7 @@ const Content = () => {
                     legend: {
                       display: false,
                     },
+                    // Displaying and styling the title of the bar plot
                     title: {
                       display: true,
                       text: "Driver Segments Engaged",
@@ -442,9 +509,14 @@ const Content = () => {
                 />
               </div>
             </div>
+
+            {/* Div 2 of row 1 Contains the Indian Map (Pasted as an image here) */}
             <div className="indian-map">
+              {/* image loaded from assets */}
               <img src={india} alt="" style={{ "margin-top": "8%" }} />
             </div>
+
+            {/* Div 3 from row 1 (Another bar Chart named Fleets with highest usage) */}
             <div className="audienceFleets">
               <div>
                 <Bar
@@ -455,6 +527,7 @@ const Content = () => {
                         data: [93, 93, 80, 80, 85],
                         fill: true,
                         pointRadius: 1,
+                        // Define different background colors in the form of an array
                         backgroundColor: [
                           "#ffafcc",
                           "#ffafcc",
@@ -517,7 +590,10 @@ const Content = () => {
               </div>
             </div>
           </div>
+
+          {/* Row 2 (Contains two divs containing Cohort analysis and Fleet Churn Journey) */}
           <div className="audienceInsightsContainerBottom">
+            {/* div 1 from row 2 (contains a table for Cohort Analysis) */}
             <table id="audienceInsightsTable">
               <thead>
                 <td></td>
@@ -528,6 +604,7 @@ const Content = () => {
                 <td>Week 5</td>
                 <td>Week 6</td>
               </thead>
+              {/* Table background color and styling given using inline css */}
               <tr>
                 <td style={{ backgroundColor: "#dee2e6" }}>Cohort 1</td>
                 <td style={{ backgroundColor: "#ffafcc" }}></td>
@@ -573,7 +650,10 @@ const Content = () => {
                 <td style={{ backgroundColor: "#f72585" }}></td>
               </tr>
             </table>
+
+            {/* Div 2 from Row 2 (Fleet Churn Journey image obtained from online hosting) */}
             <div className="fleetChurnJourney">
+              {/* This image is hosted online using free hosting website  */}
               <img src="https://i.ibb.co/hc4fxPS/image.png" alt="" />
             </div>
           </div>
@@ -581,12 +661,18 @@ const Content = () => {
         </div>
       </div>
 
+      {/* Top Performing fleets section (Contains 2 rows with 2 divs each)*/}
       <div className="topPerformingFleets">
+        {/* heading */}
         <div className="topPerformingFleetsHeading">
           TOP PERFORMING FLEETS, VEHICLE MODELS & ROUTES
         </div>
+
+        {/* The main container containing the 2 divs */}
         <div className="topPerformingFleetsContainer">
+          {/* Top Div */}
           <div className="tpfTop">
+            {/* The first div from the top container contains an image obtained from online hosting */}
             <div>
               <img
                 src="https://i.ibb.co/7XKNyk6/image.png"
@@ -594,6 +680,8 @@ const Content = () => {
                 className="indiaImg"
               />
             </div>
+
+            {/* The second div from the top container contains a table */}
             <div className="tpfTopTable">
               <table>
                 <thead>
@@ -641,8 +729,10 @@ const Content = () => {
               </table>
             </div>
           </div>
-
+          
+          {/* Bottom Div (Contains another 2 divs) */}
           <div className="tpfBottom">
+            {/* The first div from the bottom container contains an image obtained from online hosting */}
             <div>
               <img
                 src="https://i.ibb.co/p2vqhQG/image.png"
@@ -650,6 +740,8 @@ const Content = () => {
                 className="routesImg"
               />
             </div>
+
+            {/* The second div from the bottom container contains a table */}
             <div className="tpfTopTable">
               <table style={{ marginLeft: 25 }}>
                 <thead>
@@ -703,4 +795,5 @@ const Content = () => {
   );
 };
 
+// Exporting the component
 export default Content;

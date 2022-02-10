@@ -1,3 +1,5 @@
+// This file allow us to import (or require() ) its parent folder as a module.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

@@ -1,13 +1,22 @@
+// This file contains the code of the insights overview section of the designed web page
+// Components included:
+// 5 Charts plotted using ChartJS 
+
+// Import Required assets and libraries
 import React from "react";
 import { Bar, Line } from "react-chartjs-2";
 
+// Stateless Functional Component for Insights.js
 const Insights = () => {
   return (
     <div className="insights">
+      {/* Heading */}
       <div id="insight-heading">INSIGHTS OVERVIEW</div>
 
+      {/* chart1 div styling is maintained for all the plots of this section */}
       <div className="chart1">
         <div id="chart-heads">
+        {/* This div contains the stats and description of the plots  */}
           <p>
             <h3>₹100k</h3>
             <h6>Assisted Revenue</h6>
@@ -18,12 +27,20 @@ const Insights = () => {
           </p>
         </div>
 
+        {/* This div contains the plot plotted using chartJs  */}
         <div>
+          {/* Specify the type of Plot (Line, Bar, Doughnut , etc.) */}
           <Line
             data={{
+              // Labels to be displayed on the x-axis
               labels: ["Jun", "Jul", "Aug"],
+
+              // Corresponsing values of y to be displayed on the y-axis
               datasets: [
+                // Two line plots are displayed in the same chart 
+                // Thus we are using an array of objects with the corresponding styles
                 {
+                  label: "Direct Revenue",
                   data: [14, 40, 100],
                   fill: false,
                   borderColor: ["rgba(181, 51, 55, 1)"],
@@ -31,6 +48,7 @@ const Insights = () => {
                   pointRadius: 0,
                 },
                 {
+                  label: "Assisted Revenue",
                   data: [10, 20, 60],
                   fill: false,
                   borderColor: "#0077b6",
@@ -39,8 +57,11 @@ const Insights = () => {
                 },
               ],
             }}
+            // Specify the dimensions of the plot
             height={80}
             width={130}
+
+            // Other adjustments
             options={{
               maintainAspectRatio: true,
               scales: {
@@ -62,13 +83,22 @@ const Insights = () => {
                 ],
               },
               legend: {
-                display: false,
+                display: true,
+                position: "bottom",
+                labels: {
+                  boxWidth: 5,
+                  fontSize: 6,
+                  padding: 1,
+                  fontFamily: "Source Sans Pro",
+                  fontColor: "Black",
+                },
               },
             }}
           />
         </div>
       </div>
-
+      
+      {/* Same styling followed for all the charts  */}
       <div className="chart1">
         <div id="chart-heads">
           <p>
@@ -98,7 +128,6 @@ const Insights = () => {
             height={80}
             width={130}
             options={{
-              responsive: false,
               maintainAspectRatio: true,
               scales: {
                 yAxes: [
@@ -119,13 +148,22 @@ const Insights = () => {
                 ],
               },
               legend: {
-                display: false,
+                display: true,
+                position: "bottom",
+                labels: {
+                  boxWidth: 5,
+                  fontSize: 6,
+                  padding: 1,
+                  fontFamily: "Source Sans Pro",
+                  fontColor: "Black",
+                },
               },
             }}
           />
         </div>
       </div>
 
+      {/* Same styling followed for all the charts  */}
       <div className="chart1">
         <div id="chart-heads">
           <p>
@@ -170,6 +208,7 @@ const Insights = () => {
                 ],
               },
               legend: {
+                // legend not required for this chart
                 display: false,
               },
             }}
@@ -177,6 +216,7 @@ const Insights = () => {
         </div>
       </div>
 
+      {/* Same styling followed for all the charts  */}
       <div className="chart1">
         <div id="chart-heads">
           <p>
@@ -226,6 +266,7 @@ const Insights = () => {
         </div>
       </div>
 
+      {/* Same styling followed for all the charts  */}
       <div className="chart1">
         <div id="chart-heads">
           <p>
