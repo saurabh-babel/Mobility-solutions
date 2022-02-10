@@ -1,7 +1,5 @@
 **Saurabh x Babel Intern Oct 2021 - Feb 2022**
 
-## **Internship Documentation**
-
 Saurabh Chidrewar
 
 _SDE Internship at_  **Babel Pte Ltd** 
@@ -33,13 +31,3 @@ This project is created referring to the Figma design provided by the project ma
 The  **Figma design**  referred in this project can be viewed here:
 
 [Mobility Solutions - Tyre Team &amp; Client Journey](https://www.figma.com/proto/S4XryQTeJ1ZHXytA7bWER9/Mobility-Solutions---Tyre-Team-%26-Client-Journey?node-id=1%3A2018&amp;starting-point-node-id=1%3A2018&amp;scaling=scale-down-width)
-
-The complete code and dependencies are available on the github repository provided by the organisation.
-
-![](RackMultipart20220210-4-17p5awt_html_42119b2635249420.png)
-
-
-The Daily Standup and progress excel sheet helped in managing the tasks done and also tracking the blockers and getting them resolved.
-
-The Daily Standup Excel Sheet can be viewed here:
-[Daily Standup - Saurabh Chidrewar](https://babelindiadata-my.sharepoint.com/:x:/r/personal/vidyut_babel_sg/_layouts/15/doc2.aspx?sourcedoc=%7B20907BA5-139D-4580-B947-568AB08F657D%7D&amp;file=Daily%20Standup%20-%20Saurabh%20Chidrewar.xlsx&amp;action=default&amp;mobileredirect=true&amp;DefaultItemOpen=1&amp;ct=1640857901102&amp;wdOrigin=OFFICECOM-WEB.MAIN.OTHER&amp;cid=89cffa0d-d824-4618-80ca-851188b79984)
